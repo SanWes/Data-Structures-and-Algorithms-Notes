@@ -154,6 +154,41 @@ from 0 - > loop thru numbers arr [2,3,5] and add that to the [].
 0 -> 2 = [2] and so forth recursively.
 
 
+Then compare the length of each one and keep the shortest one
+
+
+Bio O Notation:
+O(m^2 * n) time 
+O(m^2) space
 
 */
+
+const bestSumTabulate = (targetSum, numbers) => {
+    const table = Array(targetSum + 1 ).fill(null);
+    table[0] = [];
+
+    for (let i = 0; i <= targetSum; i++){
+        if (table[i] !== null) {
+            for (let num of numbers) {
+                const combination = [ ...table[i], num]
+                // if this current combo is shorter than stored one
+                if ( !table[i + num] || table[i + num].length > combination.length ){
+                    table[i + num] = combination;
+                }
+            }
+        }
+    }
+
+    return table[targetSum];
+}
+
+// Testing Tabulate bestSumTabulate
+console.log("Testing Tabulate bestSumTabulate");
+console.log(bestSumTabulate(7, [2, 4]));
+console.log(bestSumTabulate(300, [7, 14, 25])); 
+console.log(bestSumTabulate(7, [2, 3])); // 
+console.log(bestSumTabulate(7, [5, 3, 4, 7])); // 
+console.log(bestSumTabulate(17, [7, 3, 14, 73])); // 
+console.log(bestSumTabulate(5, [4, 2, 6, 100, 1])); // 
+
 
