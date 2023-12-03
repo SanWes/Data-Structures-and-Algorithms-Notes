@@ -418,3 +418,38 @@ space: O(m*m)
 
 
 */
+
+
+/*
+DYNAMINC PROGRAMMING 
+
+canSum -> Decision Problem
+
+howSum -> Combinatoric Problem
+
+bestSum -> Optimization Problem
+
+
+
+
+
+
+Lets try to solve the problem with memoization.
+1. add memo object to the function
+2. add if statement to check if target is in memo object. If it is then return memo[target].
+3. Pass down memo to recursive calls 
+4. Store data in memo object. Where there are recursive return. Now store that return value in memo before you complete the return. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

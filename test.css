@@ -1,0 +1,22 @@
+.hero-title {
+    font-size: 2em;
+    font-weight: bold;
+    /* create a box shadow  */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* position the text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    padding: 10px 20px; /* Adding padding for the background */
+    background-color: #5c8eba; /* Background color for the title */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hero-title:hover {
+    background-color: #286090; /* Background color on hover */
+}
